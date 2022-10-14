@@ -1,0 +1,5 @@
+Build a caching system that only keeps the N most recently used items—also known as a least recently used (LRU) cache.
+
+Write a class LRUCache(n) that accepts a size limit n. It should support a set(key, value) method for inserting or updating items and a get(key) method for retrieving items.
+
+Can you implement a solution where both of these methods run in O(1) time?
