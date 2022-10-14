@@ -1,1 +1,0 @@
-Given an array a[] of length n, create a new array b[] such that b[i]=a[i]+a[i+1]+a[i-1]. If a[i] or a[i+1] or a[i-1] do not exist then they are seen as zero. Return array b[].
