@@ -1,0 +1,4 @@
+A unique character is one that appears only once in a string. Given a string consisting of lowercase English letters only, return the index of the first occurrence of a unique character in the string using 1-based indexing. If the string does noy contain any unique character, return -1.
+
+eg- "statistics"
+The unique characters are [a,c] among which a occurs first- at index 3.
