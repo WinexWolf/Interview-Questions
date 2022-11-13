@@ -23,28 +23,39 @@ class Result {
 
     public static int diagonalDifference(List<List<Integer>> arr) {
     // Write your code here
-    int sum1=0;
-    int sum2=0;
-    
-        int[][] list = arr.stream()
-                .map(l -> l.stream().mapToInt(Integer::intValue).toArray())
-                .toArray(int[][]::new);
-                
-    for(int i=0;i<list.length;i++)
+int ltr=0;
+int rtl=0;
+int[][] ints = arr.stream().map(x -> x.stream().mapToInt(Integer::intValue).toArray()).toArray(int[][]::new); 
+
+for(int i=0;i<ints.length;i++)
+{
+    for(int j=0;j<ints.length;j++)
     {
-        sum1+=list[i][i];
+        if(i==j)
+        {
+            ltr=ltr+ints[i][j];
+        }
+        
+        
     }
+}
+    int j=ints.length-1;
     
-    int j=0;
+  for(int i=0;i<ints.length;i++)
+{
     
-    for(int i = list.length- 1; i >= 0; i--){
-        sum2 += list[i][j];
-        j++;
-    }
-return Math.abs(sum1-sum2);
+        rtl=rtl+ints[i][j];
+        j--;
+        
     }
 
+   return Math.abs(ltr-rtl) ;
 }
+
+
+    }
+
+
 
 public class Solution {
     public static void main(String[] args) throws IOException {
@@ -76,17 +87,3 @@ public class Solution {
         bufferedWriter.close();
     }
 }
-  int d1 = 0;
-    int d2 = 0;
-    int sum = 0;
-    int j = 0;
-    int n = arr.size();
-    for(int i = 0; i < arr.size(); i++){
-        d1 += arr[i][i];
-    }
-    for(int i = n - 1; i >= 0; i--){
-        d2 += arr[i][j];
-        j++;
-    }
-    sum = abs(d1 - d2);
-    return sum;
